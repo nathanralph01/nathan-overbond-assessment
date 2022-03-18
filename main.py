@@ -1,6 +1,5 @@
 import matplotlib.pyplot as plt
 import numpy as np
-import datetime as dt
 
 MONTHS = {1: 'Jan', 2: 'Feb', 3: 'Mar', 4: 'Apr', 5:'May', 6:'Jun', 7:'Jul', 8:'Aug',
           9: 'Sep', 10: 'Oct', 11: 'Nov', 12: 'Dec'}
@@ -97,7 +96,6 @@ def fix_lst(lst1, lst2):
     return new_lst1, new_lst2
 
 
-
 def plot_graph(date_lst, bid_lst, ask_lst, price_lst):
     """
     Plots a scatter-plot graph given lists of desired data.
@@ -123,9 +121,8 @@ def plot_graph(date_lst, bid_lst, ask_lst, price_lst):
     plt.scatter(dates, prices, c='b')
 
     plt.xticks(np.arange(0, len(date_lst), 5), rotation=90)
+    plt.legend(['CleanBid', 'CleanAsk', 'LastPrice'])
     plt.show()
-
-
 
 
 def main(data_file):
